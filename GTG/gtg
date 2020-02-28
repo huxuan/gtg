@@ -111,7 +111,7 @@ def main():
     # hooked window upon crashes
     if not options.no_crash_handler:
         from GTG.gtk.crashhandler import signal_catcher
-        with signal_catcher(application.close_browser):
+        with signal_catcher(application.quit):
             # application.main(once_thru=options.boot_test, uri_list=args)
             pass
     else:
